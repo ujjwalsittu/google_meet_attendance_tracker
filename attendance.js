@@ -9,18 +9,20 @@ document.addEventListener("keydown",function(event){
     if(event.code==("KeyE")) {
         clearInterval(startAttendanceTracker);
         console.clear();
-        console.log("-------------------------------------------");
+        console.log("----------------------------------------------");
         console.log("                  Report           ");
-        console.log("-------------------------------------------");
+        console.log("----------------------------------------------");
         console.log("Attendance Tracking Started at  : "+StartTime);
         console.log("Attendance Tracking Stopped at  : "+new Date().toLocaleTimeString());
-        console.log("Total Class Duration            : "+Math.ceil(totalClassDuration/60)+" mins");
-        console.log("-------------------------------------------");
+        console.log("Total Class Duration (rounded)  : "+Math.ceil(totalClassDuration/60)+" mins");
+        console.log("----------------------------------------------");
         console.log("Students Who Attended More Than 65% Of The Class");
-        console.log("-------------------------------------------");
+        console.log("----------------------------------------------");
         max = 0;
         let sortedtstudentsNameSet = [];
-        for(studentName of studentsNameSet){
+        let mapKeys = studentDetails.keys();
+        for(i=0; i<studentDetails.size; i++){ 
+            let studentName = mapKeys.next().value;
             sortedtstudentsNameSet.push(studentName);
             if(studentName.length > max) max = studentName.length;
         }
@@ -33,9 +35,9 @@ document.addEventListener("keydown",function(event){
             attendedPercentage >= 65 ? console.log(studentName.toUpperCase()+space+"("+attendedPercentage+"%)") : studentWithLessThan65.push(studentName);
         }
         console.log("");
-        console.log("-------------------------------------------");
+        console.log("----------------------------------------------");
         console.log("Students Who Attended Less Than 65% Of The Class");
-        console.log("-------------------------------------------");
+        console.log("----------------------------------------------");
         studentWithLessThan65.length == 0 ? console.log("N/A") : "";
         for(studentName of studentWithLessThan65){
             space = " ";
@@ -65,7 +67,7 @@ function attendanceTracker(){
     }
     console.clear();
     console.log("Attendance is being tracked since : "+StartTime);
-    console.log("Click{ E }outside the console window to stop tracking attendance");
+    console.log("Click { E } outside the console window to stop tracking attendance");
     console.log("CURRENT STUDENTS STRENGTH (LIVE) : "+studentsNameSet.size);
     totalClassDuration+=1;
 }
