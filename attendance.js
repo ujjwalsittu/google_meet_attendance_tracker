@@ -68,7 +68,7 @@ function attendanceTracker(){
     }
     console.clear();
     console.log("Attendance is being tracked since : "+StartTime);
-    console.log("Type \" stop(); \" in console and press ENTER to stop tracking attendance");
+    console.log("To Stop Tracking Attendance Type \" stop(); \" in console and press ENTER");
     console.log("STUDENTS PRESENT IN CLASS (LIVE) : "+studentsNameSet.size);
     totalClassDuration+=1;
 }
