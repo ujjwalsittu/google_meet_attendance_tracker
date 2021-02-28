@@ -13,9 +13,10 @@ let stop = STOP = function(){
     console.log("----------------------------------------------");
     console.log("                  Report           ");
     console.log("----------------------------------------------");
-    console.log("Attendance Tracking Started at  : "+StartTime);
-    console.log("Attendance Tracking Stopped at  : "+new Date().toLocaleTimeString());
-    console.log("Total Class Duration (rounded)  : "+Math.ceil(totalClassDuration/60)+" mins");
+    console.log("Attendance Tracking Started at     : "+StartTime);
+    console.log("Attendance Tracking Stopped at     : "+new Date().toLocaleTimeString());
+    console.log("Total Number of Students Attended  : "+((studentDetails.size)-1));
+    console.log("Total Class Duration               : "+parseFloat(totalClassDuration/60).toFixed(1)+" mins");
     console.log("----------------------------------------------");
     console.log("Students Who Attended More Than 65% Of The Class");
     console.log("----------------------------------------------");
@@ -33,7 +34,8 @@ let stop = STOP = function(){
         space = " ";
         for(i=0; i<max-studentName.length; i++) space+=" ";
         let attendedPercentage = Math.ceil(((studentDetails.get(studentName)/60)/(totalClassDuration/60))*100);
-        attendedPercentage >= 65 ? console.log(studentName.toUpperCase()+space+"("+attendedPercentage+"%)") : studentWithLessThan65.push(studentName);
+        let attendedDuration = parseFloat(studentDetails.get(studentName)/60).toFixed(1);
+        attendedPercentage >= 65 ? console.log(studentName.toUpperCase()+space+"("+attendedPercentage+"%) "+attendedDuration+" mins") : studentWithLessThan65.push(studentName);
     }
     console.log("");
     console.log("----------------------------------------------");
@@ -44,7 +46,8 @@ let stop = STOP = function(){
         space = " ";
         for(i=0; i<max-studentName.length; i++) space+=" ";
         let attendedPercentage = Math.ceil(((studentDetails.get(studentName)/60)/(totalClassDuration/60))*100); 
-        console.log(studentName.toUpperCase()+space+"("+attendedPercentage+"%)")
+        let attendedDuration = parseFloat(studentDetails.get(studentName)/60).toFixed(1);
+        console.log(studentName.toUpperCase()+space+"("+attendedPercentage+"%) "+attendedDuration+" mins");
     }
     console.log("");
     return "Thank You For Using Meet Attendance Tracker"; 
@@ -67,8 +70,8 @@ function attendanceTracker(){
         }
     }
     console.clear();
-    console.log("Attendance is being tracked since : "+StartTime);
-    console.log("To Stop Tracking Attendance Type \" stop(); \" in console and press ENTER");
-    console.log("STUDENTS PRESENT IN CLASS (LIVE) : "+studentsNameSet.size);
+    console.log("* Attendance is being tracked since : "+StartTime);
+    console.log("* To Stop Tracking Attendance Type \" stop(); \" in console and press ENTER");
+    console.log("* STUDENTS PRESENT IN CLASS (LIVE) : "+((studentsNameSet.size)-1));
     totalClassDuration+=1;
 }
