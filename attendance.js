@@ -1,4 +1,10 @@
-console.clear();
+// ** Not in use  ** 
+// ** Not in use  ** 
+// ** Not in use  ** 
+// ** Not in use  ** 
+// ** Not in use  ** 
+
+/*console.clear();
 let studentDetails = new Map();
 let studentsNameSet = new Set();
 let buttons = document.querySelectorAll('[role="button"]');
@@ -75,3 +81,4 @@ function attendanceTracker(){
     console.log("* STUDENTS PRESENT IN CLASS (LIVE) : "+((studentsNameSet.size)-1));
     totalClassDuration+=1;
 }
+*/
