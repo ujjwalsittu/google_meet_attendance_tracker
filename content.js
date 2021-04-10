@@ -150,5 +150,6 @@ function toTimeFormat(time)
     mm = Math.floor(time/60);
     time = time - (mm*60); 
     ss = time;
-    return mm+" min "+ss+"s";
+    if(hh==0)return mm+" min "+ss+"s";
+    else return hh+" hr "+mm+" min "+ss+"s";
 }
