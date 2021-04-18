@@ -5,7 +5,7 @@ link : https://chrome.google.com/webstore/detail/google-meet-attendance-tr/ldjjo
 
 <h4>
   Images
-  <img src="1.png>
-  <img src="2.png>
-  <img src="3.jpg>
+  <img src="./images/1.png">
+  <img src="./images/2.png">
+  <img src="./images/3.jpg">
 </h4>
