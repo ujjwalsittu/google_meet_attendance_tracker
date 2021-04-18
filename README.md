@@ -5,7 +5,10 @@ link : https://chrome.google.com/webstore/detail/google-meet-attendance-tr/ldjjo
 
 <h4>
   Images
-  <img src="./images/1.png" width="50%" height="50%">
-  <img src="./images/2.png" width="50%" height="50%">
-  <img src="./images/3.jpg" width="50%" height="50%">
 </h4>
+ <p> A new button name track attendance will be added to google meet ui</p>
+  <img src="./images/1.png" width="75%" height="75%">
+ <p> once the button is clicked the attendance tracking script starts and starts tracking attendance</p>
+  <img src="./images/2.png" width="75%" height="75%">
+ <p> Once you need to generate report click the same button again a new html page will be opened with the attendance details</p>
+  <img src="./images/3.jpg" width="75%" height="75%">
