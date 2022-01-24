@@ -1,5 +1,5 @@
 {
-    "name":"Google Meet Attendance Tracker",
+    "name":"Google Meet Attendance Check",
     "description":"The most accurate and reliable chrome extension to track attendance in meet.google.com with just a single click !",
     "version":"0.4",
     "manifest_version":2,

@@ -36,16 +36,16 @@ let stop = STOP = function(){
         sortedtstudentsNameSet.push(studentName);
         studentDetails.get(studentName) >= PercentDuration_65 ? studentsMoreThan_65++ : studentsLessThan_65++;
     }
-    newWindow.document.write("<p style=margin-left:12px;font-size:18px;display:inline>"+"*Number Of People Attended More Than 65% of the Meeting : <b>"+(studentsMoreThan_65)+"</b></p>");
-    newWindow.document.write("<p style=margin-left:377px;font-size:18px;color:red;display:inline>"+"*Number Of People Attended Less Than 65% of the Meeting : <b>"+studentsLessThan_65+"</b></p>");
+    // newWindow.document.write("<p style=margin-left:12px;font-size:18px;display:inline>"+"*Number Of People Attended More Than 65% of the Meeting : <b>"+(studentsMoreThan_65)+"</b></p>");
+    // newWindow.document.write("<p style=margin-left:377px;font-size:18px;color:red;display:inline>"+"*Number Of People Attended Less Than 65% of the Meeting : <b>"+studentsLessThan_65+"</b></p>");
     newWindow.document.writeln("<hr>");
     newWindow.document.writeln("<h2 style=text-align:center>Detailed Attendance Report</h2>");
     newWindow.document.writeln("<table>");
     newWindow.document.writeln("<tr>");
     newWindow.document.writeln("<th>SNo</th>");
     newWindow.document.writeln("<th>People Name</th>");
-    newWindow.document.writeln("<th>Attended Duration</th>");
-    newWindow.document.writeln("<th>Attended Percentage</th>");
+    // newWindow.document.writeln("<th>Attended Duration</th>");
+    // newWindow.document.writeln("<th>Attended Percentage</th>");
     newWindow.document.writeln("</tr>");
     let serialNum = 1;
     sortedtstudentsNameSet.sort();
@@ -53,10 +53,10 @@ let stop = STOP = function(){
         let attendedPercentage = Math.ceil(((studentDetails.get(studentName)/60)/(totalClassDuration/60))*100);
         let attendedDuration = toTimeFormat(studentDetails.get(studentName));
         newWindow.document.writeln("<tr>");
-        newWindow.document.writeln(attendedPercentage<65 ? "<td style=color:red>"+serialNum+"</td>" : "<td>"+serialNum+"</td>");
-        newWindow.document.writeln(attendedPercentage<65 ? "<td style=color:red>"+studentName.toUpperCase()+"</td>" : "<td>"+studentName.toUpperCase()+"</td>");
-        newWindow.document.writeln(attendedPercentage<65 ? "<td style=color:red>"+attendedDuration+"</td>" : "<td>"+attendedDuration+"</td>");
-        newWindow.document.writeln(attendedPercentage<65 ? "<td style=color:red>"+attendedPercentage+"%</td>" : "<td>"+attendedPercentage+"%</td>");
+        newWindow.document.writeln(attendedPercentage<65 ? "<td style=color:black>"+serialNum+"</td>" : "<td>"+serialNum+"</td>");
+        newWindow.document.writeln(attendedPercentage<65 ? "<td style=color:black>"+studentName.toUpperCase()+"</td>" : "<td>"+studentName.toUpperCase()+"</td>");
+        // newWindow.document.writeln(attendedPercentage<65 ? "<td style=color:red>"+attendedDuration+"</td>" : "<td>"+attendedDuration+"</td>");
+        // newWindow.document.writeln(attendedPercentage<65 ? "<td style=color:red>"+attendedPercentage+"%</td>" : "<td>"+attendedPercentage+"%</td>");
         newWindow.document.writeln("</tr>");
         serialNum++;
     }
