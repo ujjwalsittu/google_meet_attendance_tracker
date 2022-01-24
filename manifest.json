@@ -1,6 +1,6 @@
 {
     "name":"Google Meet Attendance Check",
-    "description":"The most accurate and reliable chrome extension to track attendance in meet.google.com with just a single click !",
+    "description":"Google Attendance Check by GITA Autonomous College",  
     "version":"0.4",
     "manifest_version":2,
     "content_scripts":[
